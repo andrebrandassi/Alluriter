@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import classNames from "classnames";
 
-const Form = () => {
+const SignInForm = () => {
   const {
     register,
     handleSubmit,
@@ -19,9 +19,6 @@ const Form = () => {
   return (
     <div className="flex items-center justify-center w-screen h-screen flex-col">
         <h1 className="font-sans text-3xl text-sky-500 pb-1">Aluritter</h1>
-        <p className="pb-5 text-gray-500">
-          Crie uma nova conta e comece aluritar agora mesmo =)
-        </p>
         <form
           className="flex flex-col w-full lg:w-1/4 md:w-1/3 sm:w-1/2 px-10 sm:px-0"
           onSubmit={handleSubmit(handleFormSubmit)}
@@ -93,7 +90,7 @@ const Form = () => {
         </form>
         <span className="text-sm mt-2 text-gray-500">
           Já possui uma conta?{" "}
-          <Link className="text-sky-500 hover:underline" to="/signin">
+          <Link className="text-sky-500 hover:underline" to="/sign-in">
             Acesse agora!
           </Link>
         </span>
@@ -101,4 +98,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default SignInForm;
